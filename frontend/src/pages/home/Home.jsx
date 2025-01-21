@@ -152,11 +152,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* {showScrollToTop && (
-                <div className="scroll-to-top" onClick={scrollToTop}>
-                    <i className="bi bi-arrow-up"></i>
-                </div>
-            )} */}
         </>
     )
 }
