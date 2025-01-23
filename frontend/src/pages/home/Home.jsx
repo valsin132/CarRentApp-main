@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './home.css';
-
-// pictures import
 import CarRentPic from "../../pictures/Car-rent-pic.png"
 import CarRentPic2 from "../../pictures/Car-rent-pic2.png"
 import audi from "../../pictures/audi.png"
@@ -13,6 +10,8 @@ import mercedes from "../../pictures/mercedes.png"
 import nissan from "../../pictures/nissan.png"
 import toyota from "../../pictures/toyota.png"
 import vw from "../../pictures/vw.png"
+import { API_URL } from "../../constants";
+import './home.css';
 
 // Home component containing sections like featured cars, registration steps, and brand logos
 const Home = () => {
@@ -24,8 +23,7 @@ const Home = () => {
     useEffect(() => {
         const fetchRandomCars = async () => {
             try {
-                const response = await fetch('/api/cars');
-    
+                const response = await fetch(`${API_URL}/api/cars`);
                 if (response.status === 500) {
                     setError('Serverio klaida');
                     return;
