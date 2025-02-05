@@ -7,7 +7,6 @@ import reservationsRoutes from "./routes/reservations.js";
 import { connectToDb, PORT } from "./db.js";
 import { fileURLToPath } from 'url';
 import path from "path";
-import mongoose from "mongoose";
 
 dotenv.config();
 
